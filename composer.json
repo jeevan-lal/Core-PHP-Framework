@@ -1,0 +1,34 @@
+{
+  "name": "ctechhindi/core-php-framework",
+  "description": "Core PHP Framework",
+  "type": "library",
+  "keywords": [
+    "php",
+    "ctechhindi",
+    "slim"
+  ],
+  "homepage": "https://ctechhindi.in/",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Ctechhindi\\CorePhpFramework\\": "src/"
+    },
+    "files": [
+      "src/globalFunctions.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Jeevan Lal",
+      "email": "ctechhindi@gmail.com",
+      "homepage": "https://ctechhindi.in/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "slim/slim": "4.*",
+    "slim/psr7": "^1.4",
+    "slim/php-view": "^3.0"
+  },
+  "minimum-stability": "dev"
+}
