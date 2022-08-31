@@ -1,4 +1,4 @@
-<?php namespace Ctechhindi\CorePhpFramework\Config;
+<?php namespace Ctechhindi\CorePhpFramework\Libraries;
 
 class Session
 {
