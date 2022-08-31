@@ -1,7 +1,7 @@
 <?php
 
 use CTH\Config\App;
-use Ctechhindi\CorePhpFramework\Config\Session;
+use Ctechhindi\CorePhpFramework\Libraries\Session;
 
 // SYSTEM
 define('SPATH', __DIR__.DIRECTORY_SEPARATOR);

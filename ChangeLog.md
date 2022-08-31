@@ -2,6 +2,10 @@
 
 ## Versions
 
+### 1.0.3
+
+- Fixed Global Function.
+
 ### 1.0.2
 
 - Change Session Config.
