@@ -346,15 +346,21 @@ class Model
         // Query
         $sql = $this->db->conn->prepare($queryString);
         if ($sql->execute()) {
-            if (isset($options["limit"]) && $options["limit"] == "1") {
-                $out = $sql->fetch($outputType);
 
-                return $out;
+            // For Class
+            if (!empty($this->returnType)) {
+                $sql->setFetchMode(\PDO::FETCH_CLASS, $this->returnType, [$options]);
             } else {
-                $out = $sql->fetchAll($outputType);
-
-                return $out;
+                if (!empty($outputType)) $sql->setFetchMode($outputType);
             }
+
+            if (isset($options["limit"]) && $options["limit"] == "1") {
+                $out = $sql->fetch();
+            } else {
+                $out = $sql->fetchAll();
+            }
+
+            return $out;
         } else {
 
             return false;
@@ -513,7 +519,7 @@ class Model
      *      "table" => "wff_manifest_installed",
      *      "select_column" => [
      *         wff_manifest_installed.id,
-*              wff_manifest_installed.name
+     *              wff_manifest_installed.name
      *      ],
      *      "join" => [
      *          [
@@ -676,15 +682,21 @@ class Model
         // Query
         $sql = $this->db->conn->prepare($queryString);
         if ($sql->execute()) {
-            if (isset($options["limit"]) && $options["limit"] == "1") {
-                $out = $sql->fetch($outputType);
 
-                return $out;
+            // For Class
+            if (!empty($this->returnType)) {
+                $sql->setFetchMode(\PDO::FETCH_CLASS, $this->returnType, [$options]);
             } else {
-                $out = $sql->fetchAll($outputType);
-
-                return $out;
+                if (!empty($outputType)) $sql->setFetchMode($outputType);
             }
+
+            if (isset($options["limit"]) && $options["limit"] == "1") {
+                $out = $sql->fetch();
+            } else {
+                $out = $sql->fetchAll();
+            }
+
+            return $out;
         } else {
 
             return false;
