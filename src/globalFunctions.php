@@ -82,6 +82,7 @@ if (!function_exists('helper'))
             "encryption" => "Encryption.php",
             "request" => "Request.php",
             "datetime" => "DateTime.php",
+            "string" => "String.php",
         ];
         
         if (is_string($name)) {
